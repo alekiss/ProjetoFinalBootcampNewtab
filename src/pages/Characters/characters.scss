@@ -1,0 +1,32 @@
+@import "../../styles/global.scss";
+
+.characters__container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 80%;
+    margin: 0 auto;
+    h1 {
+        color: $blue;
+        font-size: $font28px;
+        padding: 80px 0 50px 0;
+    }
+    p{
+        color: $blue;
+        font-size: $font16px;
+        background: $white;
+    }
+    .characters__search {
+        display: flex;
+        justify-content: space-between;
+        border: 1px solid $blue;
+        border-radius: 4px;
+        padding: 17px;
+        width: 50%;
+        button {
+            background: $white;
+            cursor: pointer;
+        }
+    }
+}

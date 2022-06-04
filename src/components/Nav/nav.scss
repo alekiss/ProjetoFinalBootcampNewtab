@@ -1,0 +1,20 @@
+@import "./../../styles/global.scss";
+
+nav {
+    background: $dark-grey;
+    height: 90px;
+}
+
+.nav__container {
+    display: grid;
+    grid-template-columns: 2fr repeat(3, 1fr);
+    align-items: center;
+    width: 80%;
+    margin: auto;
+    .nav__links{
+        a {
+            color: $blue;
+            font-size: $font18px;
+        }
+    }
+}
