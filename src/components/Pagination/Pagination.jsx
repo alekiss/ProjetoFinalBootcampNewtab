@@ -1,18 +1,31 @@
 import React from "react";
+import "./pagination.scss"
 
-const Pagination = (props) => {
-  const { onLeftClick, onRightClick } = props;
+const Pagination = (prev, next, onPrevious, onHandleNext) => {
+
+  const handlePrevious = () => {
+    onPrevious();
+  };
+
+  const handleNext = () => {
+    onHandleNext();
+  };
 
   return (
-    <div className="pagination-container">
-      <button onClick={onLeftClick}>
-        <div className="pagination-ball"></div>
-      </button>
-      <div className="pagination-ball-center"></div>
-      <button onClick={onRightClick}>
-        <div className="pagination-ball"></div>
-      </button>
-    </div>
+    <nav className="pagination">
+      <ul>
+        {prev ? (
+          <li>
+            <button onClick={handlePrevious}>Previous</button>
+          </li>
+        ) : null}
+        {next ? (
+          <li>
+            <button onClick={handleNext}>Next</button>
+          </li>
+        ) : null}
+      </ul>
+    </nav>
   );
 };
 

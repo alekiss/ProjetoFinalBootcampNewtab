@@ -1,79 +1,103 @@
 @import "../../styles/global.scss";
 
-.characters{
+.characters {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0 auto;
+  h1 {
+    color: $blue;
+    font-size: $font28px;
+    padding: 80px 0 50px 0;
+  }
+  &__search {
+    position: relative;
+    width: 40%;
+    height: 3rem;
+    input {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border: 1px solid $blue;
+      border-radius: 4px;
+      outline: none;
+      padding: 1.25rem;
+      background: none;
+      color: $blue;
+    }
+    label {
+      position: absolute;
+      color: $blue;
+      left: 1rem;
+      top: 0.8rem;
+      padding: 0 0.5rem;
+      cursor: text;
+      transition: top 200ms ease-in, left 200ms ease-in;
+    }
+    button {
+      position: absolute;
+      background: $white;
+      cursor: pointer;
+      left: 95%;
+      top: 0.8rem;
+    }
+  }
+
+  &__select {
+    .characters__select-box {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      column-gap: 20px;
+    }
+  }
+
+  &__results {
+    .characters__background {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-top: 150px;
+      margin-bottom: 30px;
+    }
+  }
+  &__searchCharacters{
+    background-color: $grey;
+    .searchCharacters__title {
+        color: $white;
+        padding: 40px 0 20px 10%;
+        font-size: $font25px;
+    }
+    .searchCharacters__container {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        margin: 0 auto;
+        gap: 20px;
+        margin-bottom: 30px;
+    }
+  }
+  &__footer {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-direction: column;
-    margin: 0 auto;
-    h1 {
-        color: $blue;
-        font-size: $font28px;
-        padding: 80px 0 50px 0;
-    }
-    &__search {
-        position: relative;
-        width: 40%;
-        height: 3rem;
-        input {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            border: 1px solid $blue;
-            border-radius: 4px;
-            outline: none;
-            padding: 1.25rem;
-            background: none;
-        }
-        label {
-            position: absolute;
-            color: $blue;
-            left: 1rem;
-            top: 0.8rem;
-            padding: 0 0.5rem;
-            cursor: text;
-            transition: top 200ms ease-in, left 200ms ease-in;
-        }
-        button {
-            position: absolute;
-            background: $white;
-            cursor: pointer;
-            left: 95%;
-            top: 0.8rem;
-        }
-    }
-
-    &__select {
-        .characters__select-box {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            column-gap: 20px;
-        }
-    }
-
-    &__results{
-        .characters__background{
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 150px;
-            margin-bottom: 30px;
-        }
-    }
+    width: 100%;
+    height: 60px;
+    background-color: $dark-grey;
+    color: $white;
+  }
 }
 
 .search-input:focus ~ .search-label,
-.search-input:not(:placeholder-shown).search-input:not(:focus) ~.search-label
-{
-    top: -0.6rem;
-    left: 0.8rem;
-    background-color: $white;
+.search-input:not(:placeholder-shown).search-input:not(:focus) ~ .search-label {
+  top: -0.6rem;
+  left: 0.8rem;
+  background-color: $white;
 }
 
 .search-character {
-    background: red;
+  background: red;
 }
-

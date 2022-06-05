@@ -1,27 +1,19 @@
 @import "../../styles/global.scss";
 
-.pagination-container {
+.pagination{
+  background: $white;
+  gap: 10px;
+  ul {
     display: flex;
-    flex-direction: row;
-    align-items: center;
-    button {
-      border: none;
-      background-color: $white;
-    }
-  
-    .pagination-ball{
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      background-color: $pagination;
-      cursor: pointer;
-    }
-  
-    .pagination-ball-center{
-      width: 10px;
-      height: 10px;
-      border-radius: 50%;
-      margin: 0 16px;
-      background-color: $pagination-ball-center;
-    }
+    gap: 20px;
   }
+  button {
+    color: $blue;
+    width: 150px;
+    background-color: $white;
+    border: 1px solid $blue;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+}

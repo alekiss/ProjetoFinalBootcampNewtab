@@ -11,6 +11,18 @@
         font-size: $font28px;
         padding: 80px 0 50px 0;
     }
+    select {
+        width: 20%;
+        background: $lighter-grey;
+        padding: 20px;
+        border: 1px solid $border-grey;
+        border-radius: 6px;
+        font-size: $font22px;
+        color: $blue;
+        option {
+            font-size: $font18px;
+        }
+    }
     .list-episodes__box{
         display: flex;
         flex-direction: column;
