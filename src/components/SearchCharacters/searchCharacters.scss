@@ -1,0 +1,79 @@
+@import "../../styles/global.scss";
+
+.searchCharacters {
+    background: $grey;
+    .searchCharacters__title {
+        color: $white;
+        padding: 40px 0 20px 10%;
+        font-size: $font25px;
+    }
+    .searchCharacters__container{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        width: 80%;
+        margin: 0 auto;
+        gap: 20px;
+        .searchCharacters__contant{
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.14));
+            border: 0.1px solid $medium-grey;
+            border-radius: 4px;
+            .searchCharacters__image{
+                height: 150px;
+                img{
+                    max-height: 100%;
+                } 
+            }
+            .searchCharacters__information{
+                font-size: $font12px;
+                padding: 12px;
+                background: $medium-grey;
+                color: $white;
+                h1{
+                    padding: 0;
+                    font-size: $font16px;
+                    color: $white;
+                }
+                .searchCharacters__state{
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    .searchCharacters__footer {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 60px;
+        background-color: $dark-grey;
+        color: $white;
+        margin-top: 30px;
+    }
+}
+
+.Alive{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: $green;
+    margin-right: 3px;
+}
+
+.Dead{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color:$red;
+    margin-right: 3px;
+}
+
+.unknown{
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: $light-grey;
+    margin-right: 3px;
+}
+

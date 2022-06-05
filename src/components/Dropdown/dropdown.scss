@@ -1,0 +1,39 @@
+@import './../../styles/global.scss';
+
+.dropdown {
+  width: 19vw;
+  margin: 30px auto;
+  position: relative;
+
+  .dropdown-btn {
+    padding: 10px;
+    border: 1px solid $blue;
+    border-radius: 4px;
+    color: $blue;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    .title{
+        position: absolute;
+        top: -0.6rem;
+        background-color: $white;
+        padding: 0 10px;
+    }
+  }
+
+  .dropdown-content {
+    position: absolute;
+    top: 110%;
+    padding: 15px;
+    box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
+    color: $blue;
+    width: 100%;
+    cursor: pointer;
+    .dropdown-item {
+      padding: 10px;
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+  }
+}
