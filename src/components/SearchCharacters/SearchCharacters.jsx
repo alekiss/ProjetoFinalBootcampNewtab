@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import Modal from "../ModalCharacters/Modal";
 import "./searchCharacters.scss";
 
-const SearchCharacters = ({ name, index, image, status, species, gender }) => {
+const SearchCharacters = ({ name, index, image, status, species, gender, firstApparition, lastApparition }) => {
   const [showModal, setShowModal] = useState(false);
 
   const openModal = () => {
@@ -26,8 +26,10 @@ const SearchCharacters = ({ name, index, image, status, species, gender }) => {
           <div className="searchCharacters__state">
             <div className={status}></div>- {species}
           </div>
-          <p>Primeira aparição: {}</p>
-          <p>Última aparição: {}</p>
+          <p className="title">Primeira aparição:</p>
+          <p> {firstApparition}</p>
+          <p className="title">Última aparição: </p>
+          <p>{lastApparition}</p>
         </div>
       </div>
 
@@ -39,6 +41,8 @@ const SearchCharacters = ({ name, index, image, status, species, gender }) => {
           status={status}
           species={species}
           gender={gender}
+          firstApparition={firstApparition}
+          lastApparition={lastApparition}
         />
       )}
     </div>

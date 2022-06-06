@@ -2,7 +2,7 @@ import React from "react";
 import Close from "./../../assets/close.svg";
 import "./modal.scss";
 
-const Modal = ({ closeModal, name, image, status, species, gender }) => {
+const Modal = ({ closeModal, name, image, status, species, gender, firstApparition, lastApparition }) => {
   return (
     <div className="modal-container">
       <div className="modal-box">
@@ -28,11 +28,11 @@ const Modal = ({ closeModal, name, image, status, species, gender }) => {
             </section>
             <section>
               <p className="title">Primeira aparição:</p>
-              <p></p>
+              <p>{firstApparition}</p>
             </section>
             <section>
               <p className="title">Última aparição:</p>
-              <p></p>
+              <p>{lastApparition}</p>
             </section>
           </div>
         </div>

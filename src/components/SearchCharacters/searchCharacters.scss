@@ -9,7 +9,7 @@
     border: 0.1px solid $medium-grey;
     border-radius: 4px;
     .searchCharacters__image {
-      height: 150px;
+      height: 170px;
       img {
         max-height: 100%;
       }
@@ -25,7 +25,11 @@
         color: $white;
       }
       .searchCharacters__state {
+        margin: 3px 0;
         display: flex;
+      }
+      .title{
+        color: $grey-title;
       }
     }
   }

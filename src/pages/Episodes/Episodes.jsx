@@ -22,9 +22,7 @@ const Episodes = () => {
   useEffect(() => {
     let newEpisodes = [];
     episodes.map((item) => {
-      //console.log(item)
       item.characters.map((c, index) => {
-        //console.log(c)
         const foto = Math.floor(Math.random() * (9 - 1)) + 1;
         if (index === foto) {
           const image = fetch(c)
@@ -32,13 +30,11 @@ const Episodes = () => {
             .then(({ image }) => {
               newEpisodes.push({ ...item, image });
             });
-          console.log({ ...item, image });
           return image;
         }
       });
       return item;
     });
-    console.log(newEpisodes);
   }, [episodes]);
 
   return (

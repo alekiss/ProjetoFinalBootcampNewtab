@@ -94,6 +94,8 @@ const Characters = () => {
                   status={item.status}
                   species={item.species}
                   gender={item.gender}
+                  firstApparition={item.origin.name}
+                  lastApparition={item.location.name}
                   key={index}
                 />
               );
