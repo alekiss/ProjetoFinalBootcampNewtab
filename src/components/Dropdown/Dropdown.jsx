@@ -5,7 +5,6 @@ import SelectIcon from "./../../assets/selectIcon.svg";
 const Dropdown = ({ title, options, select, setSelect }) => {
   const [isActive, setIsActive] = useState(false);
 
-
   return (
     <div className="dropdown">
       <div className="dropdown-btn" onClick={(e) => setIsActive(!isActive)}>

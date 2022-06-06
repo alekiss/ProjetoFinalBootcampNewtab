@@ -1,19 +1,21 @@
 //Colors
-$dark-grey: #1C1C1C;
-$darker-grey: #2C2C2C;
-$medium-grey: #3C3E44;
-$grey: #24282F;
-$lighter-grey: #BEBEBE;
-$light-grey: #EEEEEE;
-$lighter-grey: #F2F2F2;
-$border-grey: #EBEBEB;
-$white: #FFFFFF;
-$blue: #12B0C9;
+$dark-grey: #1c1c1c;
+$darker-grey: #2c2c2c;
+$medium-grey: #3c3e44;
+$grey: #24282f;
+$lighter-grey: #bebebe;
+$light-grey: #eeeeee;
+$lighter-grey: #f2f2f2;
+$border-grey: #ebebeb;
+$white: #ffffff;
+$blue: #12b0c9;
 $black: #000000;
-$green: #1D9D2A;
-$orange: #DE9B38;
+$green: #1d9d2a;
+$orange: #de9b38;
 $red: red;
-$grey-title: #A8A8A8;
+$grey-title: #a8a8a8;
+$pagination-pages: #4a5260;
+$pagination-fixed: #323741;
 
 //Font-size
 $font44px: 2.75rem;
@@ -29,25 +31,25 @@ $font14px: 0.875rem;
 $font12px: 0.75rem;
 
 .Alive {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: $green;
-    margin-right: 3px;
-  }
-  
-  .Dead {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: $red;
-    margin-right: 3px;
-  }
-  
-  .unknown {
-    height: 15px;
-    width: 15px;
-    border-radius: 50%;
-    background-color: $light-grey;
-    margin-right: 3px;
-  }
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: $green;
+  margin-right: 3px;
+}
+
+.Dead {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: $red;
+  margin-right: 3px;
+}
+
+.unknown {
+  height: 15px;
+  width: 15px;
+  border-radius: 50%;
+  background-color: $light-grey;
+  margin-right: 3px;
+}

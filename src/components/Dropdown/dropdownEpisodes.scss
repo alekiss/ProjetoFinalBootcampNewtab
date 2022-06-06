@@ -1,36 +1,32 @@
 @import "./../../styles/global.scss";
 
-.dropdown {
-  width: 19vw;
-  margin: 30px auto;
+.dropdownEpisodes {
+  width: 210px;
   position: relative;
-
-  .dropdown-btn {
+  .dropdownEpisodes-btn {
+    height: 60px;
     padding: 10px;
-    border: 1px solid $blue;
     border-radius: 4px;
+    background: $light-grey;
     color: $blue;
     display: flex;
     align-items: center;
     justify-content: space-between;
     cursor: pointer;
+    font-size: $font22px;
     .title {
-      position: absolute;
-      top: -0.6rem;
-      background-color: $white;
       padding: 0 10px;
     }
   }
 
-  .dropdown-content {
-    position: absolute;
+  .dropdownEpisodes-content {
     top: 110%;
     padding: 15px;
     box-shadow: 3px 3px 10px 6px rgba(0, 0, 0, 0.06);
     color: $blue;
     width: 100%;
     cursor: pointer;
-    .dropdown-item {
+    .dropdownEpisodes-item {
       padding: 10px;
       cursor: pointer;
       transition: all 0.2s;
@@ -39,13 +35,13 @@
 }
 
 @media screen and (max-width: 912px) {
-  .dropdown {
+  .dropdownEpisodes {
     width: 24vw;
   }
 }
 
 @media screen and (max-width: 600px) {
-  .dropdown {
+  .dropdownEpisodes {
     width: 38vw;
   }
 }

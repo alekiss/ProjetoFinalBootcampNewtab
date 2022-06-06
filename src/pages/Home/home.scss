@@ -1,25 +1,43 @@
 @import "./../../styles/global.scss";
 
-.home__container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 75px;
-    gap: 50px;
-    .home__title{
-        h1{
-            color: $blue;
-            font-size: $font28px;
-            text-align: center;
-        }
+.home__container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  padding: 75px;
+  gap: 50px;
+  .home__title {
+    h1 {
+      color: $blue;
+      font-size: $font28px;
+      text-align: center;
+    }
+  }
+  button {
+    cursor: pointer;
+    color: $white;
+    background: $blue;
+    font-size: $font24px;
+    padding: 15px 60px;
+    border-radius: 20px;
+  }
+}
+
+@media screen and (max-width: 546px) {
+  .home__container {
+    padding: 50px;
+    .home__title {
+      h1 {
+        font-size: $font24px;
+      }
+    }
+    img {
+      height: 300px;
     }
     button {
-        cursor: pointer;
-        color: $white;
-        background: $blue;
-        font-size: $font24px;
-        padding: 15px 60px;
-        border-radius: 20px;
+      font-size: $font22px;
+      padding: 15px 50px;
     }
+  }
 }

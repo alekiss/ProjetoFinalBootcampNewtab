@@ -1,7 +1,7 @@
-import React from 'react'
-import "./home.scss"
-import HomeImage from "./../../assets/home.png"
-import { Link } from "react-router-dom"
+import React from "react";
+import "./home.scss";
+import HomeImage from "./../../assets/home.png";
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
@@ -16,7 +16,7 @@ const Home = () => {
       </Link>
       <small>&copy;rickandmortyapi.com</small>
     </div>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

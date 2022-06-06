@@ -30,3 +30,13 @@
     }
   }
 }
+
+@media screen and (max-width: 600px) {
+  .searchCharacters {
+    .searchCharacters__contant {
+      .searchCharacters__image {
+        height: 200px;
+      }
+    }
+  }
+}

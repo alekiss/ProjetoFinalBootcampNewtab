@@ -1,86 +1,80 @@
 @import "./../../styles/global.scss";
 
 nav {
-    background: $dark-grey;
-    height: 90px;
+  background: $dark-grey;
+  height: 90px;
 }
 
 .nav__container {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    width: 80%;
-    margin: auto;
-    .nav__links{
-        a {
-            color: $blue;
-            font-size: $font18px;
-        }
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  width: 80%;
+  margin: auto;
+  .nav__links {
+    a {
+      color: $blue;
+      font-size: $font18px;
     }
+  }
 }
 
 .nav__full {
-    width: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .nav__hamburger {
-    display: none;
+  display: none;
 }
 
 /*============================= MEDIA QUERIES (MEDIUM DEVICES) =============================*/
 @media screen and (max-width: 912px) {
-    .nav__full{
-        display: none;
-    }
+  .nav__full {
+    display: none;
+  }
 
-    .nav__container{
-        display: flex;
-        justify-content: space-between;
-        width: 95%;
-        .nav__logo{
-            img{
-                height: 85px;
-            }
-        }
+  .nav__container {
+    display: flex;
+    justify-content: space-between;
+    width: 95%;
+    .nav__logo {
+      img {
+        height: 85px;
+      }
     }
+  }
 
-    .nav__hamburger {
-        display: block;
-        a{
-            color: $white;
-            font-size: $font28px;
-        }
+  .nav__hamburger {
+    display: block;
+    a {
+      color: $white;
+      font-size: $font28px;
     }
+  }
 
-    .nav-small {
-        display: flex;
-        justify-content: end;
-        &__container{
-            display: flex;
-            flex-direction: column;
-            background-color: $dark-grey;
-            height: 100%;
-            width: 40%;
-            position: absolute;
-            top: 0;
-            padding: 20px;
-            a {
-                color: $white;
-                padding: 15px 0;
-                font-size: $font20px;
-            }
-            .nav-small__close{
-                font-size: $font20px;
-            }
-            
-        }
+  .nav-small {
+    display: flex;
+    justify-content: end;
+    &__container {
+      display: flex;
+      flex-direction: column;
+      background-color: $dark-grey;
+      height: 250px;
+      width: 40%;
+      position: absolute;
+      top: 0;
+      padding: 20px;
+      a {
+        color: $white;
+        padding: 10px 0;
+        font-size: $font20px;
+      }
+      .nav-small__close {
+        font-size: $font20px;
+      }
     }
-}
-
-/*============================= MEDIA QUERIES (SMALL DEVICES) =============================*/
-@media screen and (max-width: 600px) {
-    
+  }
 }

@@ -13,22 +13,22 @@
   z-index: 10;
   .modal-box {
     background: $grey;
-    height: 600px;
-    width: 1000px;
+    height: 90%;
+    width: 75%;
     border-radius: 20px;
-    .modal-close{
-        display: flex;
-        justify-content: flex-end;
-        button {
-            background-color: $grey;
-            border-radius: 20px;
-            padding: 15px;
-            cursor: pointer;
-        }
+    .modal-close {
+      display: flex;
+      justify-content: flex-end;
+      button {
+        background-color: $grey;
+        border-radius: 20px;
+        padding: 15px;
+        cursor: pointer;
+      }
     }
     .modal-content {
-        display: flex;
-        padding: 0 60px;
+      display: flex;
+      padding: 0 60px;
       .modal-image {
         img {
           height: 250px;
@@ -40,7 +40,7 @@
         padding: 0 30px;
         color: $white;
         section {
-            margin-bottom: 15px;
+          margin-bottom: 15px;
         }
         h1 {
           padding: 0;
@@ -51,19 +51,64 @@
           display: flex;
           align-items: center;
         }
-        .title{
-            color: $grey-title;
+        .title {
+          color: $grey-title;
         }
       }
     }
     .modal-characters {
-        display: flex;
-        justify-content: flex-end;
-        padding: 35px 60px;
-        p{
-            font-size: $font18px;
-            color: $blue;
+      display: flex;
+      justify-content: flex-end;
+      padding: 35px 60px;
+      p {
+        font-size: $font18px;
+        color: $blue;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .modal-container {
+    .modal-box {
+      height: 80%;
+      width: 75%;
+      .modal-content {
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .modal-information {
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          section {
+            margin-bottom: 15px;
+          }
+          .modal-state {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
         }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 414px) {
+  .modal-container {
+    .modal-box {
+      height: 90%;
+      width: 95%;
+      .modal-content {
+        .modal-information {
+          h1 {
+            font-size: $font28px;
+          }
+        }
+      }
     }
   }
 }

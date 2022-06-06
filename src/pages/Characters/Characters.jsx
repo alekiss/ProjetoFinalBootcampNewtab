@@ -4,16 +4,16 @@ import SearchCharacters from "../../components/SearchCharacters/SearchCharacters
 import SearchIcon from "./../../assets/searchIcon.svg";
 import Dropdown from "../../components/Dropdown/Dropdown";
 import BackgroundImage from "./../../assets/footer.png";
-import Pagination from "../../components/Pagination/Pagination";
 
 const Characters = () => {
-  let url = `https://rickandmortyapi.com/api/character`;
-
   const [characters, setCharacters] = useState([]);
   const [status, setStatus] = useState("");
   const [genero, setGenero] = useState("");
   const [info, setInfo] = useState({});
   const [search, setSearch] = useState("");
+  const [pageNumber, setPageNumber] = useState(1);
+
+  let url = `https://rickandmortyapi.com/api/character/?page=${pageNumber}&name=${search}&status=${status}&gender=${genero}`;
 
   const optionsStatus = ["Alive", "Dead", "unknown"];
   const optionsGenero = ["Female", "Male", "Genderless", "unknown"];
@@ -28,22 +28,17 @@ const Characters = () => {
       .catch((error) => console.log(error));
   };
 
-  const onPrevious = () => {
-    fetchCharacter(info.prev)
+  const onHandlePrevious = () => {
+    setPageNumber(pageNumber - 1);
   };
 
   const onHandleNext = () => {
-    fetchCharacter(info.next)
+    setPageNumber(pageNumber + 1);
   };
 
   useEffect(() => {
     fetchCharacter(url);
   }, [url]);
-
-  const onSearch = () => {
-    
-  }
-
 
   return (
     <div className="characters">
@@ -54,6 +49,9 @@ const Characters = () => {
           type="text"
           placeholder=" "
           className="search-input"
+          onChange={(e) => {
+            setSearch(e.target.value);
+          }}
         />
         <label className="search-label">Buscar Personagens</label>
         <button>
@@ -76,34 +74,38 @@ const Characters = () => {
           />
         </div>
       </div>
-      <div className="characters__results">
-        <div className="characters__background">
-          <img src={BackgroundImage} alt="Rick and Morty" />
-          <small>&copy;rickandmortyapi.com</small>
+
+      {search === " " ? (
+        <div className="characters__results">
+          <div className="characters__background">
+            <img src={BackgroundImage} alt="Rick and Morty" />
+            <small>&copy;rickandmortyapi.com</small>
+          </div>
         </div>
-      </div>
-      <Pagination 
-        prev={info.prev}
-        next={info.next}
-        onPrevious={onPrevious}
-        onHandleNext={onHandleNext}
-        />
-      <div className="characters__searchCharacters">
-        <p className="searchCharacters__title">Resultados</p>
-        <div className="searchCharacters__container">
-          {characters.map((item, index) => {
-            return (
-              <SearchCharacters
-                name={item.name}
-                image={item.image}
-                status={item.status}
-                species={item.species}
-                gender={item.gender}
-                key={index}
-              />
-            )
-          })}
+      ) : (
+        <div className="characters__searchCharacters">
+          <p className="searchCharacters__title">Resultados</p>
+          <div className="searchCharacters__container">
+            {characters.map((item, index) => {
+              return (
+                <SearchCharacters
+                  name={item.name}
+                  image={item.image}
+                  status={item.status}
+                  species={item.species}
+                  gender={item.gender}
+                  key={index}
+                />
+              );
+            })}
+          </div>
         </div>
+      )}
+
+      <div className="characters__pagination">
+        <div className="pages" onClick={onHandlePrevious}></div>
+        <div className="fixed"></div>
+        <div className="pages" onClick={onHandleNext}></div>
       </div>
       <div className="characters__footer">
         <small>&copy;rickandmortyapi.com</small>

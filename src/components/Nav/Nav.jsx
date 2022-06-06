@@ -1,19 +1,18 @@
-import React, { useState } from 'react'
-import "./nav.scss"
-import Logo from './../../assets/logo.png'
-import {GiHamburgerMenu} from "react-icons/gi"
-import { Link } from 'react-router-dom'
-import NavSmall from './NavSmall'
+import React, { useState } from "react";
+import "./nav.scss";
+import Logo from "./../../assets/logo.png";
+import { GiHamburgerMenu } from "react-icons/gi";
+import { Link } from "react-router-dom";
+import NavSmall from "./NavSmall";
 
 const Nav = () => {
-
   const [showNav, setShowNav] = useState(false);
 
   const openNav = () => {
     setShowNav((e) => {
       return !e;
     });
-  }
+  };
 
   return (
     <nav>
@@ -43,16 +42,15 @@ const Nav = () => {
         </div>
 
         <div className="nav__hamburger">
-          <a onClick={openNav}><GiHamburgerMenu /></a>
+          <a onClick={openNav}>
+            <GiHamburgerMenu />
+          </a>
         </div>
       </div>
 
-      {showNav && <NavSmall 
-        close={setShowNav}
-      />}
-
+      {showNav && <NavSmall close={setShowNav} />}
     </nav>
-  )
-}
+  );
+};
 
-export default Nav
+export default Nav;
